@@ -77,4 +77,78 @@ nav svg{
     width: 1.2rem;
    
 }
-/* ------------------search----------------- */
+/* ------------------MAIN----------------- */
+/* ------------------page-1 "slider img "----------------- */
+.slider{
+    width: 100%;
+    max-width: 100%;
+    height: 700px;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+.slider .list{
+    position: absolute;
+    width: max-content;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    transition: 1s;
+}
+.slider .list img{
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.slider .buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.slider .buttons button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.slider .dots{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.slider .dots li{
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fcf3f3;
+    margin: 10px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.slider .dots li.active{
+    width: 30px;
+    background-color: #ff640a;
+}
+@media screen and (max-width: 100%){
+    .slider{
+        height: 400px;
+    }
+}
+/*--page-1 " end "--------------------------------------------------------------------------------------------------------------------------*/
+
+
