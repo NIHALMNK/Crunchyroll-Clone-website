@@ -150,5 +150,89 @@ nav svg{
     }
 }
 /*--page-1 " end "--------------------------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------movie continer-------------------------------------------*/
+/*----------heading for the swiper------------*/
+.heading{
+    font-family: Lato, Helvetica Neue, helvetica, sans-serif;
+    margin: 10px;
+}
+.heading h1{
+    color: #fff;
+    font-weight: 700;
+    font-size: 25px;
+    margin: 12px 0px 7px 12px;
+    
+}
+.heading h3{
+   color: #44444c;
+   font-size: 17px;
+    margin: 0px 0px 7px 12px;
+}
+    /* Card Swiper Styles */
+.card-swiper-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 20px 0;
+}
 
+.card-swiper {
+    display: flex;
+    transition: transform 0.75s ease;
+}
+
+.card {
+    flex: 0 0 270px;
+    height: 478px;
+    margin-right: 10px;
+    background-color: #020101;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.card .card-title {
+    padding: 15px 0px 0px 5px;
+    color: white;
+    text-align: justify;
+    font-size: 16px;
+    flex-grow: 1;
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-start;
+}
+
+.swiper-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #ff640a;
+    background-color: #23252b;
+}
+
+.swiper-button.prev {
+    left: 10px;
+}
+
+.swiper-button.next {
+    right: 10px;
+}
+.card h4{
+    font-size: 15px;
+    color: #44444c;
+}
 

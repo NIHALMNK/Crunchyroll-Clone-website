@@ -39,4 +39,38 @@ window.onresize = function(event) {
     reloadSlider();
 };
 /*--page-1 " end "--------------------------------------------------------------------------------------------------------------------------*/
+// Card Swiper JavaScript
+document.addEventListener('DOMContentLoaded', () => {
+    const sliders = document.querySelectorAll('.card-swiper-container');
+
+    sliders.forEach((slider) => {
+        const cardSwiper = slider.querySelector('.card-swiper');
+        const prevButton = slider.querySelector('.swiper-button.prev');
+        const nextButton = slider.querySelector('.swiper-button.next');
+        
+        let currentPosition = 0;
+        const cardWidth = 280; // 270px width + 10px margin
+        const totalCards = cardSwiper.querySelectorAll('.card').length;
+
+        function updateSwiperPosition() {
+            cardSwiper.style.transform = `translateX(${currentPosition}px)`;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentPosition += cardWidth;
+            if (currentPosition > 0) {
+                currentPosition = -(cardWidth * (totalCards - 5)); // Show last 5 cards
+            }
+            updateSwiperPosition();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentPosition -= cardWidth;
+            if (currentPosition < -(cardWidth * (totalCards - 5))) {
+                currentPosition = 0;
+            }
+            updateSwiperPosition();
+        });
+    });
+});
 
