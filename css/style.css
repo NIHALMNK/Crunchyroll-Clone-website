@@ -11,6 +11,7 @@
     font-family: "Poppins", sans-serif;
     text-decoration: none;
     list-style: none;
+   
     
 }
 html{
@@ -86,6 +87,7 @@ nav svg{
     margin: 0;
     position: relative;
     overflow: hidden;
+    
 }
 .slider .list{
     position: absolute;
@@ -109,6 +111,7 @@ nav svg{
     width: 90%;
     display: flex;
     justify-content: space-between;
+    background-color: unset;
 }
 .slider .buttons button{
     width: 50px;
@@ -130,6 +133,7 @@ nav svg{
     padding: 0;
     display: flex;
     justify-content: center;
+    background-color: unset;
 }
 .slider .dots li{
     list-style: none;
@@ -235,4 +239,11 @@ nav svg{
     font-size: 15px;
     color: #44444c;
 }
+/*---------ads-img-----------------------------------------------*/
+main .ads-img img{
+    width: 95%;
+    margin: 30px;
+    
+}
+
 
