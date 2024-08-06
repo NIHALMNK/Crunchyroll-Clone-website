@@ -347,6 +347,86 @@ main .ads-img img{
     background-color: #2F5161;
 }
 /*-----Page-8--------------------------------------------------------------------------------------------------*/
+#page8 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;   
+  }
+#center-page8{
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100%;
+    width: 95%;
+    background-color: #000000;
+  }
+#page8>img{
+    width: 103%;
+  }
+#center-page8 .left-side{
+    position: relative;
+    height: 100%;
+    width: 30%;
+  }
+  
+#center-page8 .left-side h1{
+    color: #fff;
+    font-size: 17px;
+    margin: 9px 20px;
+    text-align: unset;
+  }
+
+.left-side .img-left img{
+    margin: 7px 20px ;
+    width: 75%;
+  }
+#center-page8 .left-side h5{
+    color: #fff;
+    font-size: 13px;
+    margin: 0px 20px;
+    text-align: unset;
+  }
+  .left-side .img-left p{
+    color: #fff;
+    text-align: justify;
+    font-size: 12px;
+    margin: 8px 20px;
+  }
+  /*------right side----------*/
+#center-page8 .right-side{
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    height: 100%;
+    width: 70%;
+    padding-left: 4vw;
+   
+  }
+  .right-side h6{
+    color: #44444c;
+    font-size: 15px;
+    margin-left: 865px;
+    margin-top: 15px;
+  }
+  .img-right img{
+    width: 15%;
+    margin: 0;
+}
+.img-right{
+    display: flex;
+    flex-direction: row;
+}
+.p-1 span{
+    color: dimgrey;
+    
+}
+.p-1{
+    color:#ffffff;
+    
+}
+/*------page-9---------------------------------------------------------------------------------------------------*/
 
 
 
