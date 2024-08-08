@@ -38,7 +38,7 @@ dots.forEach((li, key) => {
 window.onresize = function(event) {
     reloadSlider();
 };
-/*--page-1 " end "--------------------------------------------------------------------------------------------------------------------------*/
+
 // Card Swiper JavaScript
 document.addEventListener('DOMContentLoaded', () => {
     const sliders = document.querySelectorAll('.card-swiper-container');
@@ -73,4 +73,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+/*-----------------------------------------------------------------------------------------------------------------------------------*/
+document.addEventListener('DOMContentLoaded', () => {
+    const carouselContainer = document.getElementById('animeCarouselContainer');
+    const carousel = document.getElementById('animeCarousel');
+    const prevButton = document.getElementById('prevButton');
+    const nextButton = document.getElementById('nextButton');
+    
+    let currentPosition = 0;
+    const cardWidth = 264.24; // 254.24px width + 10px margin
+    const totalCards = 20; 
+    const visibleCards = Math.floor(carouselContainer.clientWidth / cardWidth);
 
+    function updateCarouselPosition() {
+        carousel.style.transform = `translateX(${currentPosition}px)`;
+    }
+
+    prevButton.addEventListener('click', () => {
+        currentPosition += cardWidth * visibleCards;
+        if (currentPosition > 0) {
+            currentPosition = -(cardWidth * (totalCards - visibleCards));
+        }
+        updateCarouselPosition();
+    });
+
+    nextButton.addEventListener('click', () => {
+        currentPosition -= cardWidth * visibleCards;
+        if (currentPosition < -(cardWidth * (totalCards - visibleCards))) {
+            currentPosition = 0;
+        }
+        updateCarouselPosition();
+    });
+});

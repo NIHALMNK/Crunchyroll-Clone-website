@@ -1,260 +1,572 @@
 
 :root{
---color-1: #000;
---text-color: #fff;
---accent-color: #ff640a;
-}
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing:border-box;
-    font-family: "Poppins", sans-serif;
-    text-decoration: none;
-    list-style: none;
-   
-    
-}
-html{
-    font-size: 12pt;
-}
-main{
-    background-color: #000;
-}
-nav{
-    height: 60px;
-    background-color: #23252b;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-.links-container{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-nav a{
-    height: 1005;
-    padding: 0 27px;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-color);
-}
-nav a:hover{
-    color: var(--accent-color);
-}
-nav .home-link{
-    margin-right: auto;
-}
-nav svg{
-    fill:var(--text-color);
-}
-#sidebar-active{
-    display: none;
-}
-.open-sidebar-button, .close-sidebar-button{
-   
-    display: none;
-}
-
-.icons-link{
-    box-sizing: border-box;
-    height: auto;
-    width: 37%;
-    padding: 20px 30px;
-    justify-content: flex-start;
-}
-/* ------------------svg-logo----------------- */
-.svg-logo{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-.icon-nav{
-    width: 1.2rem;
-   
-}
-/* ------------------MAIN----------------- */
-/* ------------------page-1 "slider img "----------------- */
-.slider{
-    width: 100%;
-    max-width: 100%;
-    height: 700px;
-    margin: 0;
-    position: relative;
-    overflow: hidden;
-    
-}
-.slider .list{
-    position: absolute;
-    width: max-content;
-    height: 100%;
-    left: 0;
-    top: 0;
-    display: flex;
-    transition: 1s;
-}
-.slider .list img{
-    width: 100%;
-    max-width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.slider .buttons{
-    position: absolute;
-    top: 45%;
-    left: 5%;
-    width: 90%;
-    display: flex;
-    justify-content: space-between;
-    background-color: unset;
-}
-.slider .buttons button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #fff5;
-    color: #fff;
-    border: none;
-    font-family: monospace;
-    font-weight: bold;
-}
-.slider .dots{
-    position: absolute;
-    bottom: 10px;
-    left: 0;
-    color: #fff;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    background-color: unset;
-}
-.slider .dots li{
-    list-style: none;
-    width: 10px;
-    height: 10px;
-    background-color: #fcf3f3;
-    margin: 10px;
-    border-radius: 20px;
-    transition: 0.5s;
-}
-.slider .dots li.active{
-    width: 30px;
-    background-color: #ff640a;
-}
-@media screen and (max-width: 100%){
-    .slider{
-        height: 400px;
+    --color-1: #000;
+    --text-color: #fff;
+    --accent-color: #ff640a;
     }
-}
-/*--page-1 " end "--------------------------------------------------------------------------------------------------------------------------*/
-/*-----------------------------------------movie continer-------------------------------------------*/
-/*----------heading for the swiper------------*/
-.heading{
-    font-family: Lato, Helvetica Neue, helvetica, sans-serif;
-    margin: 10px;
-}
-.heading h1{
-    color: #fff;
-    font-weight: 700;
-    font-size: 25px;
-    margin: 12px 0px 7px 12px;
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing:border-box;
+        font-family: "Poppins", sans-serif;
+        text-decoration: none;
+        list-style: none;
+       
+       
+        
+    }
+    /*----------------------didint add this---please add this to main file--------------------------------------------------
+    .continer{
+        padding: 0px 0px 0px 20px;
+        background-color: #000;
+}*/
+     /*----------------------didint add this-----------------------------------------------------*/
+    html, body{
+        font-size: 12pt;
+        width: 100%;
+        height: 100%;
+      
+        
+    }
+    main{
+        background-color: #000;
+    }
+    nav{
+        height: 60px;
+        background-color: #23252b;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .links-container{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    nav a{
+        height: 1005;
+        padding: 0 27px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: var(--text-color);
+    }
+    nav a:hover{
+        color: var(--accent-color);
+    }
+    nav .home-link{
+        margin-right: auto;
+    }
+    nav svg{
+        fill:var(--text-color);
+    }
+    #sidebar-active{
+        display: none;
+    }
+    .open-sidebar-button, .close-sidebar-button{
+       
+        display: none;
+    }
     
-}
-.heading h3{
-   color: #44444c;
-   font-size: 17px;
-    margin: 0px 0px 7px 12px;
-}
-    /* Card Swiper Styles */
-.card-swiper-container {
+    .icons-link{
+        box-sizing: border-box;
+        height: auto;
+        width: 37%;
+        padding: 20px 30px;
+        justify-content: flex-start;
+    }
+    /* ------------------svg-logo----------------- */
+    .svg-logo{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .icon-nav{
+        width: 1.2rem;
+       
+    }
+    /* ------------------MAIN----------------- */
+    /* ------------------page-1 "slider img "----------------- */
+    .slider{
+        width: 100%;
+        max-width: 100%;
+        height: 700px;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        
+    }
+    .slider .list{
+        position: absolute;
+        width: max-content;
+        height: 100%;
+        left: 0;
+        top: 0;
+        display: flex;
+        transition: 1s;
+    }
+    .slider .list img{
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .slider .buttons{
+        position: absolute;
+        top: 45%;
+        left: 5%;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        background-color: unset;
+    }
+    .slider .buttons button{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        background-color: #fff5;
+        color: #fff;
+        border: none;
+        font-family: monospace;
+        font-weight: bold;
+    }
+    .slider .dots{
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        color: #fff;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        background-color: unset;
+    }
+    .slider .dots li{
+        list-style: none;
+        width: 10px;
+        height: 10px;
+        background-color: #fcf3f3;
+        margin: 10px;
+        border-radius: 20px;
+        transition: 0.5s;
+    }
+    .slider .dots li.active{
+        width: 30px;
+        background-color: #ff640a;
+    }
+    @media screen and (max-width: 100%){
+        .slider{
+            height: 400px;
+        }
+    }
+    /*--page-1 " end "--------------------------------------------------------------------------------------------------------------------------*/
+    /*-----------------------------------------movie continer-------------------------------------------*/
+    /*----------heading for the swiper------------*/
+    .heading{
+        font-family: Lato, Helvetica Neue, helvetica, sans-serif;
+        margin: 10px;
+    }
+    .heading h1{
+        color: #fff;
+        font-weight: 700;
+        font-size: 25px;
+        margin: 12px 0px 7px 12px;
+        
+    }
+    .heading h3{
+       color: #44444c;
+       font-size: 17px;
+        margin: 0px 0px 7px 12px;
+    }
+        /* Card Swiper Styles */
+    .card-swiper-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+    
+    .card-swiper {
+        display: flex;
+        transition: transform 0.75s ease;
+    }
+    
+    .card {
+        flex: 0 0 270px;
+        height: 478px;
+        margin-right: 10px;
+        background-color: #020101;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .card img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 78px; /* To leave space for the Sub | Dub text */
+        background: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .card:hover .card-overlay {
+        opacity: 1;
+    }
+    
+    .card-title {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    
+    .card-rating {
+        color: #ffd700;
+        font-size: 16px;
+        margin-bottom: 5px;
+    }
+    
+    .card-details {
+        color: #ffffff;
+        font-size: 14px;
+    }
+    
+    .card h4 {
+        font-size: 15px;
+        color: #44444c;
+        padding: 10px 15px;
+        margin: 0;
+        background-color: #020101;
+    }
+    .swiper-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        color: #ff640a;
+        background-color: #23252b;
+    }
+    
+    .swiper-button.prev {
+        left: 10px;
+    }
+    
+    .swiper-button.next {
+        right: 10px;
+    }
+    
+    /*---------ads-img-----------------------------------------------*/
+    main .ads-img img{
+        width: 95%;
+        margin: 30px;
+        
+    }
+    /*--------------------------------------------------------*/
+     /*-------page-5--------------------------------------------------*/
+        
+     #page5{
+        position: relative;
+        display: flex;
+        height: 70vh;
+        width: 100vw;
+      }
+      .right-page5{
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        width: 50%;
+        padding-left: 4vw;
+      }
+      .right-page5>h1{
+        font-size: 2.8vw;
+        font-weight: 600;
+        color: #fff;
+      }
+      .right-page5>h6{
+        margin-top: 1px;
+        font-size: 17px;
+        font-weight: 500;
+        width: 50%;
+        color: #fff;
+      }
+      .right-page5>h6>span{
+        color: #ff640a;
+      }
+      .left-page5{
+        position: relative;
+        height: 100%;
+        width: 50%;
+      }
+      .left-page5>img{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        height: 371px;
+        width: 600px;
+      }
+      .right-page5 p{
+        margin: 0px 115px 6px 0px;
+        margin-bottom: 2rem;
+        color: #fff;
+        font-size: 13px;
+        text-align: justify;
+      }
+      /*-----Page-6--------------------------------------------------------------------------------------------------*/
+      .movies {
+        display: flex;
+        gap: 45px;
+        margin: 17px;
+    }
+    .movies .cover{
+        display: flex;
+    }
+    .cover img{
+        width: 124px;
+        height: 70px;
+    }
+    .movies .cover-names{
+        display: grid;
+        margin: 0px 16px;
+    } 
+    .cover-names .card-title{
+        color: #fcf3f3;
+    }
+    .cover-names h4{
+        color: #4c4c4c;
+        font-size: 19px;
+    }
+    .cover-names h6{
+        color: #4c4c4c;
+        font-size: 12px;
+    }
+    .name-main{
+        color: #fff;
+        margin: 17px 22px;
+    }
+    .name-1 h3{
+        align-content: flex-start;
+    }
+    .name-1 h6{
+        align-content: flex-end;
+        margin-left: 86%;
+    }
+    .button-showmore>button{
+        width: 100%;
+        height: 34px;
+        background-color:#203741 ;
+        color: white;
+    }
+    .button-showmore>button:hover{
+        background-color: #2F5161;
+    }
+    /*-----Page-8--------------------------------------------------------------------------------------------------*/
+    #page8 {
+        position: relative;
+        height: 100vh;
+        width: 100vw;   
+      }
+    #center-page8{
+        display: flex;
+        position: absolute;
+        top: 51%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        height: 95%;
+        width: 95%;
+        background-color: #000000;
+      }
+    #page8>img{
+        width: 99%;
+      }
+    #center-page8 .left-side{
+        position: relative;
+        height: 100%;
+        width: 30%;
+      }
+      
+    #center-page8 .left-side h1{
+        color: #fff;
+        font-size: 17px;
+        margin: 9px 20px;
+        text-align: unset;
+      }
+    
+    .left-side .img-left img{
+        margin: 7px 20px ;
+        width: 68%;
+      }
+    #center-page8 .left-side h5{
+        color: #fff;
+        font-size: 13px;
+        margin: 0px 20px;
+        text-align: unset;
+      }
+      .left-side .img-left p{
+        color: #fff;
+        text-align: justify;
+        font-size: 12px;
+        margin: 8px 20px;
+      }
+      /*------right side----------*/
+    #center-page8 .right-side{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        height: 100%;
+        width: 70%;
+        padding-left: 4vw;
+       
+      }
+      .right-side h6{
+        color: #44444c;
+        font-size: 15px;
+        margin-left: 865px;
+        margin-top: 15px;
+      }
+      .img-right img{
+        width: 15%;
+        margin: 0;
+    }
+    .img-right{
+        display: flex;
+        flex-direction: row;
+    }
+    .p-1 span{
+        color: dimgrey;
+        
+    }
+    .p-1{
+        color:#ffffff;
+        
+    }
+
+
+
+
+
+
+
+
+    /*------page-10---------------------------------------------------------------------------------------------------*/
+    /*======last copy=============================================================================================================================================================================================================================================================*/
+    .crunchyroll-heading {
+        font-family: Lato, Helvetica Neue, helvetica, sans-serif;
+        margin: 10px;
+    }
+    
+    .crunchyroll-heading h1 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 25px;
+        margin: 12px 0px 7px 12px;
+    }
+    
+    /* Anime Carousel Styles */
+    #animeCarouselContainer {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        padding: 20px 0;
+    }
+    
+    #animeCarousel {
+        display: flex;
+        transition: transform 0.75s ease;
+    }
+    
+    .anime-card {
+        flex: 0 0 254.24px;
+        height: 224.6px;
+        margin-right: 10px;
+        background-color: #020101;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .anime-card img {
+        width: 100%;
+        height: 143px;
+        object-fit: cover;
+    }
+    
+    .anime-card .anime-subtitle {
+        color: #44444c;
+        font-size: 12px;
+        margin: 2px 0;
+        padding: 0 5px;
+    }
+    
+    .anime-card .anime-title {
+        color: white;
+        font-size: 16px;
+        margin: 2px 0;
+        padding: 0 5px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .carousel-button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: #23252b;
+        border: none;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        color: #ff640a;
+    }
+    
+    #prevButton {
+        left: 10px;
+    }
+    
+    #nextButton {
+        right: 10px;
+    }
+
+   /*-----page-17--------------------------------------------------------------------------------------*/ 
+   #page17{
     position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0;
-}
-
-.card-swiper {
     display: flex;
-    transition: transform 0.75s ease;
-}
-
-.card {
-    flex: 0 0 270px;
-    height: 478px;
-    margin-right: 10px;
-    background-color: #020101;
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-.card img {
-    width: 100%;
-    height: 400px;
-    object-fit: cover;
-}
-
-.card .card-title {
-    padding: 15px 0px 0px 5px;
-    color: white;
-    text-align: justify;
-    font-size: 16px;
-    flex-grow: 1;
-    display: flex;
-    align-items: self-start;
-    justify-content: flex-start;
-}
-
-.swiper-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    color: #ff640a;
-    background-color: #23252b;
-}
-
-.swiper-button.prev {
-    left: 10px;
-}
-
-.swiper-button.next {
-    right: 10px;
-}
-.card h4{
-    font-size: 15px;
-    color: #44444c;
-}
-/*---------ads-img-----------------------------------------------*/
-main .ads-img img{
-    width: 95%;
-    margin: 30px;
-    
-}
-/*--------------------------------------------------------*/
- /*-------page-5--------------------------------------------------*/
-    
- #page5{
-    position: relative;
-    display: flex;
-    height: 100vh;
+    height: 50vh;
     width: 100vw;
   }
-  .right-page5{
+  .right-page17{
     display: flex;
     align-items: start;
     justify-content: center;
@@ -263,27 +575,27 @@ main .ads-img img{
     width: 50%;
     padding-left: 4vw;
   }
-  .right-page5>h1{
+  .right-page17>h1{
     font-size: 2.8vw;
     font-weight: 600;
     color: #fff;
   }
-  .right-page5>h6{
+  .right-page17>h6{
     margin-top: 1px;
     font-size: 17px;
     font-weight: 500;
     width: 50%;
     color: #fff;
   }
-  .right-page5>h6>span{
+  .right-page17>h6>span{
     color: #ff640a;
   }
-  .left-page5{
+  .left-page17{
     position: relative;
     height: 100%;
     width: 50%;
   }
-  .left-page5>img{
+  .left-page17>img{
     position: absolute;
     left: 50%;
     top: 50%;
@@ -291,142 +603,164 @@ main .ads-img img{
     height: 371px;
     width: 600px;
   }
-  .right-page5 p{
+  .right-page17 p{
     margin: 0px 115px 6px 0px;
     margin-bottom: 2rem;
     color: #fff;
     font-size: 13px;
     text-align: justify;
   }
-  /*-----Page-6--------------------------------------------------------------------------------------------------*/
-  .movies {
-    display: flex;
-    gap: 45px;
-    margin: 17px;
+/*---------------------------------------------------------------------------------------*/ 
+.img-cat{
+    display: block;
+    margin: 80px auto 20px auto;
+    width: 15%;
 }
-.movies .cover{
-    display: flex;
+.h3-cat{
+    margin-bottom: 1.5rem;
+    line-height: 1.625rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-align: center;
+    color: #ff640a;
 }
-.cover img{
-    width: 124px;
-    height: 70px;
-}
-.movies .cover-names{
-    display: grid;
-    margin: 0px 16px;
-} 
-.cover-names .card-title{
-    color: #fcf3f3;
-}
-.cover-names h4{
-    color: #4c4c4c;
-    font-size: 19px;
-}
-.cover-names h6{
-    color: #4c4c4c;
-    font-size: 12px;
-}
-.name-main{
-    color: #fff;
-    margin: 17px 22px;
-}
-.name-1 h3{
-    align-content: flex-start;
-}
-.name-1 h6{
-    align-content: flex-end;
-    margin-left: 86%;
-}
-.button-showmore>button{
-    width: 100%;
-    height: 34px;
-    background-color:#203741 ;
-    color: white;
-}
-.button-showmore>button:hover{
-    background-color: #2F5161;
-}
-/*-----Page-8--------------------------------------------------------------------------------------------------*/
-#page8 {
+
+/* From Uiverse.io by cssbuttons-io */ 
+.last-button {
+    --color: #ff640a;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
     position: relative;
-    height: 100vh;
-    width: 100vw;   
-  }
-#center-page8{
-    display: flex;
-    position: absolute;
-    top: 55%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-    width: 95%;
-    background-color: #000000;
-  }
-#page8>img{
-    width: 103%;
-  }
-#center-page8 .left-side{
-    position: relative;
-    height: 100%;
-    width: 30%;
+    cursor: pointer;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color 0.5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+    display: block;
+    margin: auto;
+    margin-bottom: 50px;
+    background-color: transparent;
   }
   
-#center-page8 .left-side h1{
-    color: #fff;
-    font-size: 17px;
-    margin: 9px 20px;
-    text-align: unset;
+  .last-button:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
   }
+  
+  .last-button:hover {
+    color: #fff;
+  }
+  
+  .last-button:before {
+    top: 100%;
+    left: 100%;
+    transition: all 0.7s;
+  }
+  
+  .last-button:hover:before {
+    top: -30px;
+    left: -30px;
+  }
+  
+  .last-button:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+  }
+  /*--last setion----------------------------------------------------------------------------*/
+  .main-container {
+    width: 1519.2px;
+    height: 536.8px;
+    background: linear-gradient(180deg, #000000, #213944);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.large-container {
+    width: 1228px;
+    height: 504.8px;
+}
+.footer-container {
+    width: 1100px;
+    height: 404.8px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer-section {
+    width: 282.5px;
+    height: 380px;
+}
+h3 {
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
+}
+a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+}
+a:hover {
+    text-decoration: underline;
+}
+.gold-link {
+    color: gold;
+}
+.last-con {
+    width: 1100px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 265px;
+}
+.con-space {
+    width: 959.65px;
+    height: 18px;
+}
 
-.left-side .img-left img{
-    margin: 7px 20px ;
-    width: 75%;
-  }
-#center-page8 .left-side h5{
-    color: #fff;
-    font-size: 13px;
-    margin: 0px 20px;
-    text-align: unset;
-  }
-  .left-side .img-left p{
-    color: #fff;
-    text-align: justify;
+.logo-last img{
+    width: 158px;
+    height: 12px;
+    
+}
+.copyright {
+    width: 171.44px;
+    height: 18px;
+    color: #ccc;
     font-size: 12px;
-    margin: 8px 20px;
-  }
-  /*------right side----------*/
-#center-page8 .right-side{
-    display: flex;
-    align-items: start;
-    flex-direction: column;
-    height: 100%;
-    width: 70%;
-    padding-left: 4vw;
-   
-  }
-  .right-side h6{
-    color: #44444c;
-    font-size: 15px;
-    margin-left: 865px;
-    margin-top: 15px;
-  }
-  .img-right img{
-    width: 15%;
-    margin: 0;
+    margin-left: 15px;
 }
-.img-right{
-    display: flex;
-    flex-direction: row;
+.language-selector {
+    width: 140.35px;
+    height: 44px;
+    background-color: #213944;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    font-size: 14px;
 }
-.p-1 span{
-    color: dimgrey;
-    
+footer{
+    margin-top: -17px;
+    background-color: #213944;
 }
-.p-1{
-    color:#ffffff;
-    
-}
-/*------page-9---------------------------------------------------------------------------------------------------*/
-
-
-
+/*-----end-------------------------------------------------------------------------------------------------------*/
